@@ -17,53 +17,68 @@ Link da simulação no <a href="https://wokwi.com/projects/396863714056398849">W
 ## Explicação do Projeto 📖
 Um programa que mede:
 
- O nível de luminosidade através de um resistor LDR  
+ O nível de luminosidade através de um LDR  
 <ul>
 <li>
-    verde: sem luminosidade ou pouca (ok), 
+    Baixa luminosidade: LED verde  + mensagem no LCD
 </li>
 <li>
-    amarelo + beep:  luminosidade média (em alerta) 
+    Média luminosidade: LED amarelo + mensagem no LCD
+
 </li>
 <li>
-    vermelho + beep: muita luminosidade (crítico).
+    Alta luminosidade: LED vermelho + beep + mensagem no LCD
 </li>
 </ul>
 <br>
- O nível de humidade
+ O nível de umidade através do DHT
 <ul>
 <li>
-    
+  Baixa umidade: LED vermelho + mensagem no LCD + beep
 </li>
 <li>
-   
+  Umidade ideal: LED verde + mensagem no LCD 
 </li>
 <li>
-  
+  Alta umidade: LED vermelho + mensagem no LCD + beep
 </li>
 </ul>
 <br>
- E temperatura (em °C)
+ E temperatura (em °C), também através do DHT
 <ul>
 <li>
-    
+  Baixa temperatura: LED amarelo + mensagem no LCD + beep
 </li>
 <li>
-   
+  temperatura ideal: LED verde + mensagem no LCD 
 </li>
 <li>
-  
+  Alta temperatura: LED amarelo + mensagem no LCD + beep
 </li>
 </ul>
 
+## Componentes do projeto 🛠️
+<ul>
+    <li>1x Placa Arduino Uno</li>
+    <li>1x Breadboard</li>
+    <li>1x Potenciômetro</li>
+    <li>1x DHT11</li>
+    <li>1x Buzzer</li>
+    <li>1x Display LCD</li>
+    <li>1x Sensor de fotorrresistência</li>
+    <li>3x LEDs</li>
+    <li>6x Resistores</li>
+</ul>
+
+<br>
+
 ## Dependências do projeto 📦
 <ul>
-    <li>Gabriel Barros Cisoto (RM556309)</li>
-    <li>Pedro Henrique Bizzo de Santana (RM557263)</li>
-    <li>Pedro Henrique Mendes dos Santos (RM555332)</li>
-    <li>João Marcelo Furtado Romero (RM555199)</li>
-    <li>Kayky Silva Stiliano (RM555148)</li>
+    <li>LiquidCrystal</li>
+    <li>DHT Sensor library</li>
 </ul>
+
+<br>
 
 ## Explicando o <a href="https://github.com/gh-johnny/iot-display-lcd-sensors/blob/main/arduino.c">Código</a> 🧑‍💻
 
@@ -146,12 +161,6 @@ void testaLuminozidade() {
 
 A função <span style="font-style: italic;">montaTelaHumidade</span> que retorna void irá ler valores analógicos do DHT, em específico, a humidade
 
-Se a o valor lido está abaixo de 50 então é escrito para o display o valor, e uma mensagem indicando baixa humidade, assim como o beep é soado e o LED vermelho é aceso
-
-Se a o valor lido for maior ou igual a 50 e menor que 70, significa que a humidade está em nível médio, isso é escrito no display
-assim como o valor lido, o LED amarelo é aceso
-
-Se não satisfazer ambas condições significa que o valor pode ser igual ou acima de 70, escrevendo no display então seu valor e uma mensagem de humidade alta, um beep então é soado, assim como o LED verde é aceso
 
 ```c
 void montaTelaHumidade() {
@@ -202,13 +211,6 @@ void montaTelaHumidade() {
 <hr>
 
 A função <span style="font-style: italic;">montaTelaTemp</span> que retorna void irá ler valores analógicos do DHT, em específico, a temperatura
-
-Se a o valor lido está abaixo de 10 então é escrito para o display o valor, e uma mensagem indicando baixa temperatura, assim como o beep é soado e o LED vermelho é aceso
-
-Se a o valor lido for maior ou igual a 50 e menor que 70, significa que a temperatura está em nível médio, isso é escrito no display
-assim como o valor lido, o LED amarelo é aceso
-
-Se não satisfazer ambas condições significa que o valor pode ser igual ou acima de 70, escrevendo no display então seu valor e uma mensagem de temperatura alta, um beep então é soado  
 
 ```c
 void montaTelaTemp(){
