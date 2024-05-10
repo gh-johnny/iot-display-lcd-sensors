@@ -330,8 +330,6 @@ void loop() {
 }
 ```
 
-<section style="display: flex; justify-content: center; width: 100%"><img width="200px" heigth="200px" src="https://raw.githubusercontent.com/gh-johnny/iot-display-lcd-sensors/main/docs/assets/arduino-icon.png" alt="Placa Arduino/Arduino board"></section>
+<section style="display: flex; justify-content: center; width: 100%; margin-top: 20px"><img width="110px" src="https://raw.githubusercontent.com/gh-johnny/iot-display-lcd-sensors/main/docs/assets/arudino-icon.png" alt="Placa Arduino/Arduino board"></section>
 
-<hr>
-
-<p style="text-align: center;">Se encontra sob a <a href="https://github.com/gh-johnny/iot-display-lcd-sensors/blob/main/LICENSE">MIT License.</a></p>
+<p style="text-align: center; border-top: 2px solid #404040; padding: 16px; margin-top: 10px">Este projeto se encontra sob a <a href="https://github.com/gh-johnny/iot-display-lcd-sensors/blob/main/LICENSE">MIT License.</a></p>
