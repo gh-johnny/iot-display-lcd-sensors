@@ -12,6 +12,7 @@
 <img src="https://raw.githubusercontent.com/gh-johnny/iot-display-lcd-sensors/main/docs/assets/project-printscreen.png" alt="print do circuito Arduino/printscreen Arduino circuit"/>
  
 Link da simulação no <a href="https://wokwi.com/projects/396863714056398849">Wokwi</a>
+Link do vídeo de explicação no <a href="https://youtu.be/65e72CsH1QI">Youtube</a>
 <br />
 <br />
 ## Explicação do Projeto 📖
