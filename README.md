@@ -17,22 +17,25 @@ Link do vídeo de explicação no <a href="https://youtu.be/65e72CsH1QI">Youtube
 <br />
 ## Explicação do Projeto 📖
 Um programa que mede:
+
  
  O nível de luminosidade através de um LDR 🔆
+
 <ul>
 <li>
     Baixa luminosidade: LED verde  + mensagem no LCD
 </li>
 <li>
     Média luminosidade: LED amarelo + mensagem no LCD
- 
 </li>
 <li>
     Alta luminosidade: LED vermelho + beep + mensagem no LCD
 </li>
 </ul>
 <br>
+
  O nível de umidade através do DHT 💦
+
 <ul>
 <li>
   Baixa umidade: LED vermelho + mensagem no LCD + beep
@@ -45,7 +48,9 @@ Um programa que mede:
 </li>
 </ul>
 <br>
+
  E temperatura (em °C), também através do DHT 🌡
+ 
 <ul>
 <li>
   Baixa temperatura: LED amarelo + mensagem no LCD + beep
@@ -80,7 +85,7 @@ Um programa que mede:
 </ul>
  
 <br>
- 
+
 ## Explicando o <a href="https://github.com/gh-johnny/iot-display-lcd-sensors/blob/main/arduino.c">Código</a> 🧑‍💻
  
 Precisamos incluir as bibliotecas para podermos ter acesso a métodos dos quais vamos precisar para interagir com o DHT.
@@ -168,7 +173,6 @@ Verifica o valor da umidade lida e executa diferentes ações com base em interv
 Atualiza o display LCD com a mensagem correspondente ao nível de umidade detectado.
  
 Controla os LEDs conectados aos pinos 13, 12 e 11, e um buzzer conectado ao pino 8, para indicar visual e auditivamente o nível de umidade. Os LEDs e o buzzer são acionados de acordo com as condições de umidade detectadas.
- 
  
 ```c
 void montaTelaHumidade() {
