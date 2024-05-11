@@ -326,9 +326,9 @@ void setup() {
 ```
 <hr>
  
-A função <span style="font-style: italic;">loop</span> que retorna void, no Arduíno, servirá como o ciclo de vida inteiro do projeto, é uma função que por padrão roda infinitamente até algo dentro ou fora do códgio pará-lo.
- Aqui, vamos chamar nossas funções principais já declaradas para termos uma melhor leitura e manutenção do código, assim como chamar também a função
-<span style="font-style: italic;">montaTelaBlank</span> entre essas funções para termos um "reset" entre os passos da nossa aplicação
+A função `loop()` que retorna void, no Arduíno, servirá como o ciclo de vida inteiro do projeto, é uma função que por padrão roda infinitamente até algo dentro ou fora do códgio pará-lo.
+ Aqui, vamos chamar nossas funções principais já declaradas para termos uma melhor leitura e manutenção do código, assim como chamar também a função 
+ `montaTelaBlank()` entre essas funções para termos um "reset" entre os passos da nossa aplicação
  
 ```c
 void loop() {
